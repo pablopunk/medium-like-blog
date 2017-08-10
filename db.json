@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "First post",
+      "author": "Pablo Varela",
+      "content": "*This is awesome!*",
+      "picture": "https://file-mbpkjosxmz.now.sh/pexels-photo-196655.jpeg"
+    }
+  ]
+}
