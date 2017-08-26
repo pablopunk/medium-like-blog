@@ -2,7 +2,7 @@ import $ from 'jquery'
 
 window.$ = window.jQuery = $
 
-const postBoxClicked = () => window.location.href = '/post.html'
+const postBoxClicked = () => (window.location.href = '/post.html')
 const goBackButtonClicked = () => window.history.back()
 const goTopButtonClicked = () => $('body').animate({scrollTop: 0}, 200)
 
