@@ -1,15 +1,29 @@
+*::selection {
+	background-color: $highlight-color;
+}
+
+main {
+	margin-bottom: 50px;
+}
+
 h1 {
-  font-size: 1.5rem !important;
+  font-size: 1.5em !important;
 	color: $main-color !important;
 }
 
 h2 {
-  font-size: .9rem !important;
+  font-size: .9em !important;
 }
 
-h3 {
-  font-size: .8rem !important;
-  &:hover {
-    background-color: $fade-color;
-  }
+.flex-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
+
+.center-text {
+	text-align: center;
+}
+
+

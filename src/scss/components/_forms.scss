@@ -1,0 +1,30 @@
+.login-form {
+	input, button {
+		margin: .3em 0 1em 0;
+	}
+	input {
+		width: 100%;
+		padding: .6rem;
+		border-radius: 5px;
+		border: 1px solid $highlight-color;
+		appearance: none;
+		@include xs {
+			font-size: 1.4em;
+		}
+	}
+	input:focus {
+		outline: none;
+		border: none;
+	}
+	label {
+		font-weight: normal;
+		@include xs {
+			font-size: 1.4em;
+		}
+	}
+}
+
+.form-button-group {
+	display: flex;
+	justify-content: center;
+}

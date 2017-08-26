@@ -1,5 +1,13 @@
 .post-list {
   margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post-list:after { // adjust last row
+	content: "";
+	flex: auto;
 }
 
 .post-box {
@@ -14,6 +22,10 @@
   * {
     margin: .3em;
   }
+	p {
+		max-height: 80px;
+		text-align: justify;
+	}
   &:hover {
 		background-color: $fade-color;
 	}

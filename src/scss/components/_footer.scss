@@ -1,6 +1,18 @@
-footer {
+footer {
 	display: flex !important;
-	justify-content: center;
-	margin: 1em;
+	justify-content: space-around;
+	align-items: center;
 	color: $secondary-color;
+	background: $footer-background;
+	.go-top {
+		cursor: pointer;
+		transition: color .1s, border-bottom .1s;
+		&:hover {
+			color: $main-color;
+			border-bottom: 1px solid $main-color;
+		}
+	}
+	div {
+		padding: .4em;
+	}
 }
