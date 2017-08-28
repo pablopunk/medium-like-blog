@@ -1,16 +1,11 @@
 .post-list {
+  margin: 0 auto;
   margin-top: 2em;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.post-list:after { // adjust last row
-	content: "";
-	flex: auto;
+  width: 100%;
 }
 
 .post-box {
+  float: left;
   display: flex;
   flex-direction: column;
   align-items: center;
