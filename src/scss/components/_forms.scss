@@ -5,12 +5,10 @@
 	input {
 		width: 100%;
 		padding: .6rem;
-		border-radius: 5px;
-		border: 1px solid $highlight-color;
+		border: none;
+		border-bottom: 1px solid $gray-color;
 		appearance: none;
-		@include xs {
-			font-size: 1.4em;
-		}
+		font-size: 1.4em;
 	}
 	input:focus {
 		outline: none;
@@ -18,13 +16,15 @@
 	}
 	label {
 		font-weight: normal;
-		@include xs {
-			font-size: 1.4em;
-		}
+		font-size: 1.4em;
 	}
 }
 
 .form-button-group {
 	display: flex;
 	justify-content: center;
+	button {
+		margin: 0 1em;
+		width: 100%;
+	}
 }
