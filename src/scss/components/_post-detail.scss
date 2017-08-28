@@ -1,13 +1,13 @@
-article {
-	padding: 2em 1em;
-	display: flex !important;
-	flex-direction: column;
+.post {
+  padding: 2em 1em;
+  display: flex !important;
+  flex-direction: column;
   align-items: center;
-	img {
-		width: 100%;
-		max-width: 700px;
-		margin: 1.5em 0 2em 0;
-		border-radius: 5px;
-		box-shadow: 3px 6px 16px #aaa;
-	}
+  .post-img {
+    width: 100%;
+    max-width: 700px;
+    margin: 1.5em 0 2em 0;
+    border-radius: 5px;
+    box-shadow: 3px 6px 16px #aaa;
+  }
 }

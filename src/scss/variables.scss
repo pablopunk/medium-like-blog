@@ -1,8 +1,10 @@
+$black-color: #1a1a1a;
 $main-color: #4582ec;
 $secondary-color: #37BC9B;
 $highlight-color: #79FFE1;
 $fade-color: whitesmoke;
 $alert-color: orangered;
+$gray-color: rgba(0, 0, 0, .44);
 
 $footer-background: rgba(255, 255, 255, .9);
 
@@ -15,7 +17,7 @@ $screen-lg-min: 1200px;
 $screen-md-max: ($screen-lg-min - 1);
 
 @mixin xs {
-	@media (max-width: $screen-xs-max) {
-		@content;
-	}
+  @media (max-width: $screen-xs-max) {
+    @content;
+  }
 }

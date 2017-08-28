@@ -1,29 +1,24 @@
 *::selection {
-	background-color: $highlight-color;
+  background-color: $highlight-color;
 }
 
 main {
-	margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 h1 {
-  font-size: 1.5em !important;
-	color: $main-color !important;
-}
-
-h2 {
-  font-size: .9em !important;
+  color: $main-color;
 }
 
 .flex-center {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .center-text {
-	text-align: center;
+  text-align: center;
 }
 
 
