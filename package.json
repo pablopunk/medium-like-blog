@@ -7,7 +7,7 @@
     "start": "json-server --static ./dist --port 3200 db.json",
     "dev": "gulp",
     "build": "gulp build",
-    "test": "standard"
+    "test": "standard --fix"
   },
   "repository": {
     "type": "git",
