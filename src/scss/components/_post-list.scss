@@ -27,6 +27,8 @@
   }
   .post-img {
     width: 270px;
+    height: 180px;
+    background-color: black;
     box-shadow: 3px 6px 16px #aaa;
     border-radius: 5px;
     cursor: pointer;
@@ -44,8 +46,26 @@
     * {
       margin: .2em;
     }
-    img {
-      width: 45px;
+    .post-info-left {
+      img {
+        width: 40px;
+        border-radius: 50%;
+      }
+    }
+    .post-info-right {
+      margin-top: 4px;
+      width: 100%;
+    }
+    .social {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .like-count {
+        color: royalblue;
+      }
+      .comments-count {
+        margin-left: 20px;
+      }
     }
     .date {
       color: $gray-color;
