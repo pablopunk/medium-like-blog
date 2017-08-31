@@ -1,0 +1,23 @@
+.navbar {
+  border-radius: 0;
+  border-bottom-width: 3px;
+}
+.navbar-brand {
+	font-family: 'Pattaya', san-serif;
+  font-size: 1.6em;
+}
+.categories {
+	display: flex;
+	align-items: center;
+	margin: 0;
+	height: $navbar-height;
+	li {
+		padding: .4em .6em;
+		opacity: .7;
+	}
+	@include xs {
+		flex-direction: column;
+		height: inherit;
+		align-items: flex-start;
+	}
+}

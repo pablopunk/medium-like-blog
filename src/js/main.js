@@ -2,7 +2,6 @@ import $ from 'jquery'
 
 window.$ = window.jQuery = $
 
-
 const save = (name, val) => window.localStorage.setItem(name, val)
 const load = name => window.localStorage.getItem(name)
 const loadLikes = id => parseInt(load(`likes-${id}`) || 0)

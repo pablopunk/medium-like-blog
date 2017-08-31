@@ -25,40 +25,41 @@ gulp.task('build', ['sass', 'html', 'js', 'img'], () => console.log('building...
 
 gulp.task('sass', () => {
   gulp.src('./src/scss/style.scss')
-  .pipe(sourcemaps.init())
-  .pipe(sass().on('error', error => notify().write(error)))
-  .pipe(postcss([autoprefixer(), cssnano()]))
-  .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest('./dist/'))
-  .pipe(browser.stream())
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('error', error => notify().write(error)))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./dist/'))
+    .pipe(browser.stream())
 })
 
 gulp.task('html', () => {
   gulp.src('src/*.html')
-  .pipe(importHtml('src/components/'))
-  .pipe(htmlmin({collapseWhiteepace: true}))
-  .pipe(gulp.dest('dist/'))
-  .pipe(browser.stream())
+    .pipe(importHtml('src/components/'))
+    .pipe(htmlmin({collapseWhiteepace: true}))
+    .pipe(gulp.dest('dist/'))
+    .pipe(browser.stream())
 })
 
 gulp.task('js', () => {
   gulp.src('src/js/main.js')
-  .pipe(tap(file => {
-    file.contents = browserify(file.path, {debug: true})
-    .transform('babelify', {presets: ['es2015']})
-    .bundle()
-    .on('error', error => notify().write(error))
-  }))
-  .pipe(buffer())
-  .pipe(sourcemaps.init({loadMaps: true}))
-  .pipe(uglify())
-  .pipe(sourcemaps.write('./'))
-  .pipe(gulp.dest('dist/'))
-  .pipe(browser.stream())
+    .pipe(tap(file => {
+      file.contents = browserify(file.path, {debug: true})
+        .transform('babelify', {presets: ['es2015']})
+        .bundle()
+        .on('error', error => notify().write(error))
+    }))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(uglify())
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('dist/'))
+    .pipe(browser.stream())
 })
 
 gulp.task('img', () => {
   gulp.src('src/img/*')
-  .pipe(imagemin()) // optimizamos el peso de las imágenes
-  .pipe(gulp.dest('dist/img/'))
+    .pipe(imagemin()) // optimizamos el peso de las imágenes
+    .pipe(gulp.dest('dist/img/'))
 })
+
