@@ -1,4 +1,7 @@
 import $ from 'jquery'
+import CommentService from './commentService'
+import UI from './ui'
+import Comments from './comments'
 
 window.$ = window.jQuery = $
 
@@ -32,3 +35,8 @@ $(document).on('click', '.go-back-button', goBackButtonClicked)
 $(document).on('click', '.go-top', goTopButtonClicked)
 $(document).on('click', '.like', likePostClicked)
 
+const commentService = new CommentService()
+const ui = new UI('.comments')
+const comments = new Comments(ui, commentService)
+
+comments.init()
