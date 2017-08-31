@@ -1,5 +1,5 @@
 {
-  "name": "medium-like-blog",
+  "name": "pablog",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,8 +7,7 @@
     "start": "json-server --static ./dist --port 3200 db.json",
     "dev": "gulp",
     "build": "gulp build",
-    "test": "standard --fix",
-    "deploy": "npm run build && mv dist pablog && now pablog && mv pablog dist"
+    "test": "standard --fix"
   },
   "repository": {
     "type": "git",
