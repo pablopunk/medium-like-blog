@@ -28,3 +28,12 @@
 	}
 }
 
+
+.comment {
+	border: 1px solid $fade-color;
+	padding: 1em;
+	margin-bottom: 1em;
+	.comment-name {
+		font-size: 1.5em;
+	}
+}

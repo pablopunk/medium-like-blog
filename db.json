@@ -1,8 +1,10 @@
 {
   "comments": [
     {
-      "id": 1,
-      "content": "hi!"
+      "name": "Pablo Varela",
+      "email": "pablovarela182@gmail.com",
+      "content": "Este artículo me ha gustado mucho!",
+      "id": 1
     }
   ]
 }

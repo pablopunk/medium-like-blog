@@ -1,3 +1,11 @@
+import $ from 'jquery'
+
+const commentHtml = comment => `
+	<div class="comment">
+		<div class="comment-name">${comment.name}</div>
+		<p class="comment-content">${comment.content}</p>
+	</div>
+`
 
 export default class {
 	constructor (ui, model) {
@@ -6,6 +14,10 @@ export default class {
 	}
 
 	init () {
+		this.reloadComments()
+	}
+
+	reloadComments () {
 		this.model.list(d => this.update(d)).fail(this.ui.setError)
 	}
 
@@ -14,8 +26,23 @@ export default class {
 			this.ui.setEmpty()
 			return
 		}
-		this.ui.setIdealHtml('')
+		let html = ''
+		comments.map(c => html += commentHtml(c))
+		this.ui.setIdealHtml(html)
 		this.ui.setIdeal()
+	}
+
+	handleForm (form) {
+		const name = $(form).find('#name').val()
+		const email = $(form).find('#email').val()
+		const content = $(form).find('#content').val()
+		this.model.save({name, email, content}, () => this.reloadComments())
+	}
+
+	newCommentClicked (ev) {
+		ev.preventDefault()
+		this.handleForm(ev.target)
+		return false
 	}
 }
 

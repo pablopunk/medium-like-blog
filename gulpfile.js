@@ -59,7 +59,7 @@ gulp.task('js', () => {
 
 gulp.task('img', () => {
   gulp.src('src/img/*')
-    .pipe(imagemin()) // optimizamos el peso de las imágenes
+    .pipe(imagemin())
     .pipe(gulp.dest('dist/img/'))
 })
 

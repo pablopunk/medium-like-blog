@@ -27,10 +27,28 @@
 </article>
 
 <section class="comments ui loading">
-  <div class="ui-status loading">Loading...</div>
-  <div class="ui-status error">Error loading comments</div>
-  <div class="ui-status empty">No comments</div>
-  <div class="ui-status ideal">
-    Show comments and form
-  </div>
+	<h2>Comments</h2>
+	<div class="row">
+		<div class="col-sm-6 columns">
+			<form class="new-comment-form">
+				<h3>Write a comment!</h3>
+				<label>Name</label>
+				<input type="text" id="name" name="name" placeholder="Enter your name" />
+				<label>Email</label>
+				<input type="text" id="email" name="email" placeholder="me@example.com" />
+				<label>Comment</label>
+				<textarea id="content" name="content" placeholder="Write anything you like..."></textarea>
+				<button class="btn btn-primary new-comment-button">Send</button>
+			</form>
+		</div>
+		<div class="col-sm-6 columns">
+			<div class="ui-status loading">Loading...</div>
+			<div class="ui-status error">Error loading comments</div>
+			<div class="ui-status empty">No comments</div>
+			<div class="ui-status ideal">
+				Show comments and form
+			</div>
+		</div>
+	</div>
+	</div>
 </section>

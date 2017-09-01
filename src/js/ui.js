@@ -1,8 +1,6 @@
-import $ from 'jquery'
-
-export default class UI {
-  constructor (selector) {
-    this.element = $(selector)
+export default class {
+  constructor (element) {
+    this.element = element
     this.states = ['empty', 'loading', 'error', 'partial', 'ideal']
   }
 
