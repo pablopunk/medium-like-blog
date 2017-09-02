@@ -9,7 +9,7 @@ const commentHtml = comment => `
 
 const inputErrorHtml = error => `<div>${error}</div>`
 
-const inputErrorsHtml = errors => `<div class="error">${errors.map(e => inputErrorHtml(e)).join('')}</div>`
+const inputErrorsHtml = errors => `<div class="alert alert-danger">${errors.map(e => inputErrorHtml(e)).join('')}</div>`
 
 const validateName = name => /^[a-z ,.'-]+$/i.test(name)
 const validateEmail = email => /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(email)
@@ -87,7 +87,7 @@ export default class {
     const comment = { name, email, content }
     this.clearValidationErrors()
     if (this.validate(comment, this.showValidationErrors)) {
-      this.model.save(comment, () => this.reloadComments())
+      this.model.save(comment, () => this.reloadComments(), () => this.showValidationErrors(['There was an error posting the comment']))
     }
   }
 
