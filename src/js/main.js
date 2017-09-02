@@ -1,10 +1,10 @@
 import $ from 'jquery'
-import CommentService from './commentService'
+import rest from './rest'
 import UI from './ui'
 import Comments from './comments'
 import Likes from './likes'
 
-const commentService = new CommentService()
+const commentService = new rest('/comments')
 const ui = new UI($('.comments'))
 const comments = new Comments(ui, commentService)
 const likes = new Likes($('.like'), window.localStorage)
