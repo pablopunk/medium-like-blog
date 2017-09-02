@@ -35,7 +35,11 @@ export default class {
     })
     // load comments and unbind scroll event
     $(window).on('myScroll', ev => {
-      if ($('body').scrollTop() > ($('#comments').offset().top - $('#comments').height())) {
+      const bodyScrolled = $(window).scrollTop()
+      const commentsTop = $('#comments').offset().top
+      const commentsHeight = $('#comments').height()
+      const shouldCommentsAppear = (commentsTop - commentsHeight < bodyScrolled)
+      if (shouldCommentsAppear) {
         this.reloadComments()
         $(window).off('scroll')
       }
