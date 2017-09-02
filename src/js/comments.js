@@ -97,14 +97,31 @@ export default class {
     $('.new-comment-errors').html('')
   }
 
+  clearForm () {
+    $('.new-comment-form')[0].reset()
+  }
+
+  enableNewCommentButton () {
+    $('.new-comment-button').prop('disabled', false)
+  }
+
   handleForm (form) {
+    $('.new-comment-button').prop('disabled', true)
     const name = $(form).find('#name').val()
     const email = $(form).find('#email').val()
     const content = $(form).find('#content').val()
     const comment = { name, email, content }
     this.clearValidationErrors()
     if (this.validate(comment, this.showValidationErrors)) {
-      this.model.save(comment, () => this.reloadComments(), () => this.showValidationErrors(['There was an error posting the comment']))
+      this.model.save(comment, () => {
+        this.reloadComments()
+        this.clearForm()
+        this.enableNewCommentButton()
+      }, () => {
+        this.showValidationErrors(['There was an error posting the comment'])
+      })
+    } else {
+      this.enableNewCommentButton()
     }
   }
 
