@@ -3,7 +3,6 @@
   display: flex !important;
   flex-direction: column;
   align-items: center;
-  max-width: 650px;
   margin: 0 auto;
   .post-img {
     width: 100%;
@@ -23,8 +22,17 @@
       margin-top: 1em;
     }
   }
+  .post-title {
+    @include xs {
+      width: 100%;
+    }
+  }
   p {
     font-size: 1.3em;
+    max-width: 650px;
+    @include xs {
+      width: 100%;
+    }
   }
 }
 
