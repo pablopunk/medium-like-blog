@@ -1,39 +1,39 @@
 .post {
-	padding: 2em 1em;
-	display: flex !important;
-	flex-direction: column;
-	align-items: center;
-	max-width: 650px;
-	margin: 0 auto;
-	.post-img {
-		width: 100%;
-		max-width: 700px;
-		margin: 1.5em 0 2em 0;
-		border-radius: 5px;
-		box-shadow: 3px 6px 16px #aaa;
-	}
-	.post-info {
-		padding: .5em 1em;
-		margin-bottom: 2em;
-		background: $fade-color;
-		border-radius: 3px;
-		@include xs {
-			align-self: stretch;
-			background: none;
-			margin-top: 1em;
-		}
-	}
-	p {
-		font-size: 1.3em;
-	}
+  padding: 2em 1em;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  max-width: 650px;
+  margin: 0 auto;
+  .post-img {
+    width: 100%;
+    max-width: 700px;
+    margin: 1.5em 0 2em 0;
+    border-radius: 5px;
+    box-shadow: 3px 6px 16px #aaa;
+  }
+  .post-info {
+    padding: .5em 1em;
+    margin-bottom: 2em;
+    background: $fade-color;
+    border-radius: 3px;
+    @include xs {
+      align-self: stretch;
+      background: none;
+      margin-top: 1em;
+    }
+  }
+  p {
+    font-size: 1.3em;
+  }
 }
 
 
 .comment {
-	border: 1px solid $fade-color;
-	padding: 1em;
-	margin-bottom: 1em;
-	.comment-name {
-		font-size: 1.5em;
-	}
+  border: 1px solid $fade-color;
+  padding: 1em;
+  margin-bottom: 1em;
+  .comment-name {
+    font-size: 1.5em;
+  }
 }
