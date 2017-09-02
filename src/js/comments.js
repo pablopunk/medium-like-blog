@@ -22,7 +22,24 @@ export default class {
   }
 
   init () {
-    this.reloadComments()
+    if (!$('#comments').length) {
+      return
+    }
+    // listen to window scroll efficiently
+    let scrollTimer
+    $(window).on('scroll', ev => {
+      if (scrollTimer) {
+        clearTimeout(scrollTimer)
+      }
+      scrollTimer = setTimeout(() => { $(window).trigger('myScroll') }, 200)
+    })
+    // load comments and unbind scroll event
+    $(window).on('myScroll', ev => {
+      if ($('body').scrollTop() > ($('#comments').offset().top - $('#comments').height())) {
+        this.reloadComments()
+        $(window).off('scroll')
+      }
+    })
   }
 
   reloadComments () {
