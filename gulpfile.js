@@ -9,6 +9,7 @@ const htmlmin = require('gulp-htmlmin')
 const uglify = require('gulp-uglify')
 const postcss = require('gulp-postcss')
 const imagemin = require('gulp-imagemin')
+const responsive = require('gulp-responsive')
 const browser = require('browser-sync').create()
 const browserify = require('browserify')
 const cssnano = require('cssnano')
@@ -21,7 +22,7 @@ gulp.task('default', ['build'], () => {
   gulp.watch(['src/js/*.js', 'src/js/**/*.js'], ['js'])
 })
 
-gulp.task('build', ['sass', 'html', 'js', 'img'], () => console.log('building...'))
+gulp.task('build', ['sass', 'html', 'js', 'img', 'video'], () => console.log('building...'))
 
 gulp.task('sass', () => {
   gulp.src('./src/scss/style.scss')
@@ -58,8 +59,24 @@ gulp.task('js', () => {
 })
 
 gulp.task('img', () => {
-  gulp.src('src/img/*')
+  // multiple sizes
+  gulp.src('src/img/post/*')
+    .pipe(responsive({
+      '*': [
+        {width: 200, rename: {suffix: '-200px'}},
+        {width: 400, rename: {suffix: '-400px'}},
+        {width: 600, rename: {suffix: '-600px'}}
+      ]
+    }))
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/img/'))
+  // one size
+  gulp.src([ 'src/img/profile/*', 'src/img/assets/*' ])
     .pipe(imagemin())
     .pipe(gulp.dest('dist/img/'))
 })
 
+gulp.task('video', () => {
+  gulp.src('src/video/*')
+    .pipe(gulp.dest('dist/img/'))
+})
