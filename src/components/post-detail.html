@@ -1,53 +1,54 @@
 <article class="post">
-	<h1>Why build a Progressive Web App?</h1>
-	<div class="post-info">
-		<div class="post-info-left">
-			<img src="./img/pablo-varela.png" alt="Author">
-		</div>
-		<div class="post-info-right">
-			<div class="author">Pablo Varela <span class="date">Thursday</span></div>
-			<div class="social">
-				<div class="like-count">2</div>
-				<img src="./img/like.png" alt="Like" class="like" data-post="pwa" />
-				<a class="comments-count" href="#comments">3 comments</a>
-			</div>
-		</div>
-	</div>
-	<p>
-	You may not have heard of them yet, but <strong>Progressive Web Apps (PWA)</strong> are about to change the mobile landscape. While introduced in 2015 by Google, <em>PWAs</em> have gained popularity this year. So before it becomes all the rage, what are Progressive Web Apps exactly?
-	</p>
-	<img class="post-img" src="./img/pwa.jpg" srcset="img/pwa-200px.jpg 200w, img/pwa-400.jpg 400, img/pwa-600px.jpg 600w" alt="article image" />
-	<h3>What is a PWA?</h3>
-	<p>
-	In the most simple sense, <em>PWAs</em> are mobile apps delivered through the web. This technology allows <em>PWAs</em> to deliver an app-like experience on your browser. It feels like a native app due to the use of an app-shell that provides app-style navigations and gestures. Since progressive apps are built on the web, they are not tied to specific devices. A PWA displays seamlessly and identically on all devices, including desktop, mobile, tablet, or whatever comes next.
-	</p>
-	<p>
-	What’s more, <a href="https://developers.google.com/web/fundamentals/getting-started/primers/service-workers">service workers</a> enable a Progressive Web App to load instantly, regardless of network quality. In other words, this web app is designed to work offline and in areas of low connectivity. With the help of pre-caching, it stays up-to-date, serving the user with the newest content upon launch. Similar to an app, the user is able to save the PWA to their home screen to access it at any time. Making it installable, without the hassle of downloading it from the app stores.
-	</p>
+  <h1>Why build a Progressive Web App?</h1>
+  <div class="post-info">
+    <div class="post-info-left">
+      <img src="./img/pablo-varela.png" alt="Author">
+    </div>
+    <div class="post-info-right">
+      <div class="author">Pablo Varela <span class="date">Thursday</span></div>
+      <div class="social">
+        <div class="like-count">2</div>
+        <img src="./img/like.png" alt="Like" class="like" data-post="pwa" />
+        <a class="comments-count" href="#comments">3 comments</a>
+      </div>
+    </div>
+  </div>
+  <p>
+  You may not have heard of them yet, but <strong>Progressive Web Apps (PWA)</strong> are about to change the mobile landscape. While introduced in 2015 by Google, <em>PWAs</em> have gained popularity this year. So before it becomes all the rage, what are Progressive Web Apps exactly?
+  </p>
+  <img class="post-img" src="./img/pwa.jpg" srcset="img/pwa-200px.jpg 200w, img/pwa-400.jpg 400, img/pwa-600px.jpg 600w" alt="article image" />
+  <h3>What is a PWA?</h3>
+  <p>
+  In the most simple sense, <em>PWAs</em> are mobile apps delivered through the web. This technology allows <em>PWAs</em> to deliver an app-like experience on your browser. It feels like a native app due to the use of an app-shell that provides app-style navigations and gestures. Since progressive apps are built on the web, they are not tied to specific devices. A PWA displays seamlessly and identically on all devices, including desktop, mobile, tablet, or whatever comes next.
+  </p>
+  <p>
+  What’s more, <a href="https://developers.google.com/web/fundamentals/getting-started/primers/service-workers">service workers</a> enable a Progressive Web App to load instantly, regardless of network quality. In other words, this web app is designed to work offline and in areas of low connectivity. With the help of pre-caching, it stays up-to-date, serving the user with the newest content upon launch. Similar to an app, the user is able to save the PWA to their home screen to access it at any time. Making it installable, without the hassle of downloading it from the app stores.
+  </p>
 </article>
 
 <section class="comments ui loading">
-	<h2>Comments</h2>
-	<div class="row">
-		<div class="col-sm-6 columns">
-			<form action="" class="new-comment-form">
-				<h3>Write a comment!</h3>
-				<label>Name</label>
-				<input type="text" id="name" name="name" placeholder="Enter your name" />
-				<label>Email</label>
-				<input type="text" id="email" name="email" placeholder="me@example.com" />
-				<label>Comment</label>
-				<textarea id="content" name="content" placeholder="Write anything you like..."></textarea>
-				<button class="btn btn-primary new-comment-button">Send</button>
-			</form>
-		</div>
-		<div class="col-sm-6 columns">
-			<div class="ui-status loading">Loading...</div>
-			<div class="ui-status error">Error loading comments</div>
-			<div class="ui-status empty">No comments</div>
-			<div class="ui-status ideal">
-				Show comments and form
-			</div>
-		</div>
-	</div>
+  <h2>Comments</h2>
+  <div class="row">
+    <div class="col-sm-6 columns">
+      <form action="" class="new-comment-form">
+        <h3>Write a comment!</h3>
+        <div class="new-comment-errors"></div>
+        <label>Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" />
+        <label>Email</label>
+        <input type="text" id="email" name="email" placeholder="me@example.com" />
+        <label>Comment</label>
+        <textarea id="content" name="content" placeholder="Write anything you like..."></textarea>
+        <button class="btn btn-primary new-comment-button">Send</button>
+      </form>
+    </div>
+    <div class="col-sm-6 columns">
+      <div class="ui-status loading">Loading...</div>
+      <div class="ui-status error">Error loading comments</div>
+      <div class="ui-status empty">No comments</div>
+      <div class="ui-status ideal">
+        Show comments and form
+      </div>
+    </div>
+  </div>
 </section>

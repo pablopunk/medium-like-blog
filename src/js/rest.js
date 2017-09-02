@@ -13,11 +13,11 @@ export default class {
   }
 
   // save a new item or update an existing one
-  save (item, cb) {
+  save (item, cb, fail = defaultError) {
     if (item.id) {
-      this.update(item, cb)
+      this.update(item, cb, fail)
     } else {
-      this.create(item, cb)
+      this.create(item, cb, fail)
     }
   }
 
@@ -28,7 +28,7 @@ export default class {
 
   // create a new item
   create (item, cb, fail = defaultError) {
-    return $.ajax({ url: this.url, data: item, success: cb, error: fail })
+    return $.ajax({ url: this.url, method: 'post', data: item, success: cb, error: fail })
   }
 
   // update an existing item

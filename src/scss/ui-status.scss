@@ -7,10 +7,12 @@
 
   .empty, .loading, .error {
     text-align: center;
-		padding: 1em;
+    padding: 1em;
   }
-	.error {
-		background: $alert-color;
-		color: white;
-	}
 }
+
+.error {
+  background: $alert-color;
+  color: white;
+}
+
