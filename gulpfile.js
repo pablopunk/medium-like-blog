@@ -64,8 +64,8 @@ gulp.task('img', () => {
     .pipe(responsive({
       '*': [
         {width: 200, rename: {suffix: '-200px'}},
-        {width: 400, rename: {suffix: '-400px'}},
-        {width: 600, rename: {suffix: '-600px'}}
+        {width: 450, rename: {suffix: '-450px'}},
+        {width: 700, rename: {suffix: '-700px'}}
       ]
     }))
     .pipe(imagemin())

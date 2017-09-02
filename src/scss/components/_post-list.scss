@@ -36,11 +36,19 @@
     &:hover {
       box-shadow: 6px 8px 16px #888;
     }
+    @include xs {
+      width: 100%;
+      height: inherit;
+    }
   }
   p {
     text-align: justify;
     color: $gray-color;
   }
+  @include xs {
+    width: 100%;
+  }
+
 }
 
 .post-info {
