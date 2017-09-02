@@ -5,18 +5,6 @@
       "email": "pablovarela182@gmail.com",
       "content": "Este artículo me ha gustado mucho!",
       "id": 1
-    },
-    {
-      "name": "Steve Jobs",
-      "email": "s@s.com",
-      "content": "I'm on iCloud!",
-      "id": 2
-    },
-    {
-      "name": "asd",
-      "email": "asd@asd.com",
-      "content": " asd asd asd asd asd asd asd ",
-      "id": 3
     }
   ]
 }
