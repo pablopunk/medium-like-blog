@@ -16,7 +16,7 @@ const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
 
 gulp.task('default', ['build'], () => {
-  browser.init({ proxy: 'http://127.0.0.1:3200/', browser: 'safari' })
+  browser.init({ proxy: 'http://127.0.0.1:3200/' })
   gulp.watch(['src/scss/*.scss', 'src/scss/**/*.scss'], ['sass'])
   gulp.watch(['src/*.html', 'src/**/*.html'], ['html', 'img'])
   gulp.watch(['src/js/*.js', 'src/js/**/*.js'], ['js'])
